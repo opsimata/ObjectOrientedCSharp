@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ByteBank
 {
-    internal class Account
+    public class Account
     {
+        public int AgencyNumber;
+        public string accountNumber, accountHolder;
+        public double balance;
     }
 }
