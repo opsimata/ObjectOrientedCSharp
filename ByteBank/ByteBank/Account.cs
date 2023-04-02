@@ -17,5 +17,19 @@ namespace ByteBank
         {
             this.balance += value;
         }
+
+        public bool Withdraw(double value)
+        {
+            if (value <= this.balance)
+            {
+                this.balance -= value;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("\nInvalid operation!\nNo sufficient founds!\n");
+                return false;
+            }
+        }
     }
 }

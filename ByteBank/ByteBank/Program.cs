@@ -11,11 +11,16 @@ class Program
         account01.accountNumber = "1011-9";
         account01.balance = 1000;
 
-        Console.WriteLine(account01.accountHolder + " account balance: $" + account01.balance + ".");
+        Console.WriteLine(account01.accountHolder + " account current balance: $" + account01.balance + ".");
 
         account01.Deposit(100);
 
-        Console.WriteLine(account01.accountHolder + " account balance: $" + account01.balance + ".");
+        Console.WriteLine(account01.accountHolder + " account current balance: $" + account01.balance + ".");
+
+        if (account01.Withdraw(3000) == true)
+        {
+            Console.WriteLine(account01.accountHolder + " account current balance: $" + account01.balance + ".");
+        }
 
         Console.Write("\nPress any key to close...");
         Console.ReadLine();
