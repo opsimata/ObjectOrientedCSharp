@@ -31,5 +31,19 @@ namespace ByteBank
                 return false;
             }
         }
+        public bool Transfer(double value, Account receiver)
+        {
+            if (this.balance < value)
+            {
+                Console.WriteLine("\nInvalid operation!\nNo sufficient founds!\n");
+                return false;
+            }
+            else
+            {
+                this.Withdraw(value);
+                receiver.Deposit(value);
+                return true;
+            }
+        }
     }
 }
