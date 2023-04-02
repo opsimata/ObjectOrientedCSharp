@@ -11,5 +11,11 @@ namespace ByteBank
         public int AgencyNumber;
         public string accountNumber, accountHolder;
         public double balance;
+
+
+        public void Deposit(double value)
+        {
+            this.balance += value;
+        }
     }
 }

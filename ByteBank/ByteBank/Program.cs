@@ -13,6 +13,10 @@ class Program
 
         Console.WriteLine(account01.accountHolder + " account balance: $" + account01.balance + ".");
 
+        account01.Deposit(100);
+
+        Console.WriteLine(account01.accountHolder + " account balance: $" + account01.balance + ".");
+
         Console.Write("\nPress any key to close...");
         Console.ReadLine();
     }
