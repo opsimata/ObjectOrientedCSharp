@@ -8,9 +8,9 @@ namespace ByteBank
 {
     public class Account
     {
-        public int AgencyNumber;
+        public int agencyNumber;
         public string accountNumber, accountHolder;
-        public double balance;
+        public double balance = 100;
 
 
         public void Deposit(double value)
