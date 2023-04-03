@@ -12,7 +12,6 @@ namespace ByteBank
         public string accountNumber, accountHolder;
         public double balance = 100;
 
-
         public void Deposit(double value)
         {
             this.balance += value;
