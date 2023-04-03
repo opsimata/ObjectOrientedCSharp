@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace ByteBank
         public string accountNumber;
         public double accountBalance = 100;
 
-        public string accountHolder;
+        public AccountHolder accountHolder;
 
         public void Deposit(double value)
         {
@@ -21,10 +22,12 @@ namespace ByteBank
 
         public void PrintData()
         {
-            Console.WriteLine("Account holder: " + accountHolder);
+            Console.WriteLine("Holder: " + accountHolder.name);
+            Console.WriteLine("Holder ID: " + accountHolder.ID);
+            Console.WriteLine("Holder profession: " + accountHolder.profession);
             Console.WriteLine("Account number: " + accountNumber);
             Console.WriteLine("Agency number :" + agencyNumber);
-            Console.WriteLine("Balance: " + accountBalance);
+            Console.WriteLine("Balance: $" + accountBalance);
         }
 
         public bool Withdraw(double value)

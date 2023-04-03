@@ -4,28 +4,28 @@ class Program
 {
     static void Main(string[] args)
     {
-        Account account01 = new Account();
+        //Account account01 = new Account();
 
-        account01.accountHolder = "Person 01";
-        account01.agencyNumber = 15;
-        account01.accountNumber = "1011-9";
-        account01.accountBalance = 1000;
+        //account01.accountHolder = "Person 01";
+        //account01.agencyNumber = 15;
+        //account01.accountNumber = "1011-9";
+        //account01.accountBalance = 1000;
 
-        Console.WriteLine("\nAccount holder: " + account01.accountHolder + "." + "\nAccount balance: $" + account01.accountBalance + "." + "\nAgency number: " + account01.agencyNumber + "." + "\nAccount number: " + account01.accountNumber + ".");
+        //Console.WriteLine("\nAccount holder: " + account01.accountHolder + "." + "\nAccount balance: $" + account01.accountBalance + "." + "\nAgency number: " + account01.agencyNumber + "." + "\nAccount number: " + account01.accountNumber + ".");
 
-        Account account04 = new Account();
+        //Account account04 = new Account();
 
-        account04.accountHolder = "Person 01";
-        account04.agencyNumber = 15;
-        account04.accountNumber = "1011-9";
-        account04.accountBalance = 1000;
+        //account04.accountHolder = "Person 01";
+        //account04.agencyNumber = 15;
+        //account04.accountNumber = "1011-9";
+        //account04.accountBalance = 1000;
 
-        Console.WriteLine("\nAccount holder: " + account04.accountHolder + "." + "\nAccount balance: $" + account04.accountBalance + "." + "\nAgency number: " + account04.agencyNumber + "." + "\nAccount number: " + account04.accountNumber + ".");
+        //Console.WriteLine("\nAccount holder: " + account04.accountHolder + "." + "\nAccount balance: $" + account04.accountBalance + "." + "\nAgency number: " + account04.agencyNumber + "." + "\nAccount number: " + account04.accountNumber + ".");
 
-        account01 = account04;
+        //account01 = account04;
 
-        Console.WriteLine("\n");
-        Console.WriteLine(account01 == account04);
+        //Console.WriteLine("\n");
+        //Console.WriteLine(account01 == account04);
 
         //Account account02 = new Account();
 
@@ -49,7 +49,20 @@ class Program
         //account03.accountHolder = "Person 03";
         //Console.WriteLine("\nAccount holder: " + account03.accountHolder + "." + "\nAccount balance: $" + account03.accountBalance + "." + "\nAgency number: " + account03.agencyNumber + "." + "\nAccount number: " + account03.accountNumber + ".");
 
-        account01.PrintData();
+        //account01.PrintData();
+
+        AccountHolder client = new AccountHolder();
+        client.name = "Client 01";
+        client.ID = "020.441.248-85";
+        client.profession = "Architect";
+
+        Account account = new Account();
+        account.accountHolder = client;
+        account.agencyNumber = 1;
+        account.accountNumber = "1674-4";
+        account.accountBalance = 1000;
+
+        account.PrintData();
 
         Console.Write("\nPress any key to close...");
         Console.ReadLine();
