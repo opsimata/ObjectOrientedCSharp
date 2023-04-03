@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ByteBank.Client;
 
-namespace ByteBank
+namespace ByteBank.Accounts
 {
     public class Account
     {
@@ -17,24 +12,24 @@ namespace ByteBank
 
         public void Deposit(double value)
         {
-            this.accountBalance += value;
+            accountBalance += value;
         }
 
         public void PrintData()
         {
-            Console.WriteLine("Holder: " + accountHolder.name);
-            Console.WriteLine("Holder ID: " + accountHolder.ID);
-            Console.WriteLine("Holder profession: " + accountHolder.profession);
+            Console.WriteLine("Client: " + accountHolder.name);
+            Console.WriteLine("Client ID: " + accountHolder.ID);
+            Console.WriteLine("Client profession: " + accountHolder.profession);
             Console.WriteLine("Account number: " + accountNumber);
-            Console.WriteLine("Agency number :" + agencyNumber);
+            Console.WriteLine("Agency number: " + agencyNumber);
             Console.WriteLine("Balance: $" + accountBalance);
         }
 
         public bool Withdraw(double value)
         {
-            if (value <= this.accountBalance)
+            if (value <= accountBalance)
             {
-                this.accountBalance -= value;
+                accountBalance -= value;
                 return true;
             }
             else
@@ -45,14 +40,14 @@ namespace ByteBank
         }
         public bool Transfer(double value, Account receiver)
         {
-            if (this.accountBalance < value)
+            if (accountBalance < value)
             {
                 Console.WriteLine("\nInvalid operation!\nNo sufficient founds!\n");
                 return false;
             }
             else
             {
-                this.Withdraw(value);
+                Withdraw(value);
                 receiver.Deposit(value);
                 return true;
             }
