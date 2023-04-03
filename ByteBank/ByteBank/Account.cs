@@ -10,18 +10,26 @@ namespace ByteBank
     {
         public int agencyNumber;
         public string accountNumber, accountHolder;
-        public double balance = 100;
+        public double accountBalance = 100;
 
         public void Deposit(double value)
         {
-            this.balance += value;
+            this.accountBalance += value;
+        }
+
+        public void PrintData()
+        {
+            Console.WriteLine("Account holder: " + accountHolder);
+            Console.WriteLine("Account number: " + accountNumber);
+            Console.WriteLine("Agency number :" + agencyNumber);
+            Console.WriteLine("Balance: " + accountBalance);
         }
 
         public bool Withdraw(double value)
         {
-            if (value <= this.balance)
+            if (value <= this.accountBalance)
             {
-                this.balance -= value;
+                this.accountBalance -= value;
                 return true;
             }
             else
@@ -32,7 +40,7 @@ namespace ByteBank
         }
         public bool Transfer(double value, Account receiver)
         {
-            if (this.balance < value)
+            if (this.accountBalance < value)
             {
                 Console.WriteLine("\nInvalid operation!\nNo sufficient founds!\n");
                 return false;
