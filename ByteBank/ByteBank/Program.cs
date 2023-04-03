@@ -65,6 +65,18 @@ class Program
 
         account.PrintData();
 
+
+        Account account02 = new Account();
+        account02.accountHolder = new AccountHolder();
+        account02.accountHolder.name = "Client 02";
+        account02.accountHolder.ID = "165.149.452.14";
+        account02.accountHolder.profession = "Teacher";
+        account02.agencyNumber = 41;
+        account02.accountNumber = "3541-7";
+        account02.accountBalance = 6741.21;
+
+        Console.WriteLine("\n" + account02.accountHolder.name);
+
         Console.Write("\nPress any key to close...");
         Console.ReadLine();
     }
