@@ -5,6 +5,18 @@ namespace ByteBank.Accounts
     public class Account
     {
         public int agencyNumber;
+        public int AgencyNumber
+        {
+            get { return this.agencyNumber; }
+            set
+            {
+                if (value > 0)
+                {
+                    this.agencyNumber = value;
+                }
+            }
+        }
+
         public string accountNumber;
         private double accountBalance = 100;
 
