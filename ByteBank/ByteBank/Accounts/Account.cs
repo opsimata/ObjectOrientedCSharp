@@ -4,6 +4,8 @@ namespace ByteBank.Accounts
 {
     public class Account
     {
+        public static int TotalAccounts { get; private set; }
+
         public int agencyNumber;
         public int AgencyNumber
         {
@@ -16,9 +18,6 @@ namespace ByteBank.Accounts
                 }
             }
         }
-
-        //public string accountNumber;
-
         public string AccountNumber { get; set; }
         public AccountHolder AccountHolder { get; set; }
 
@@ -87,6 +86,7 @@ namespace ByteBank.Accounts
         {
             this.AgencyNumber = agencyNumber;
             this.AccountNumber = accountNumber;
+            TotalAccounts++;
         }
     }
 }

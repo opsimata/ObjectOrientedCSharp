@@ -85,12 +85,17 @@ class Program
         //Console.WriteLine(account03.AgencyNumber);
         //Console.WriteLine(account03.AccountNumber);
 
-        Account account04 = new Account(13, "3563-7");
-        account04.SetBalance(500);
-        account04.AccountHolder = new AccountHolder();
+        //Account account04 = new Account(13, "3563-7");
+        //account04.SetBalance(500);
+        //account04.AccountHolder = new AccountHolder();
+        //Console.WriteLine(account04.GetBalance());
+        //Console.WriteLine(account04.AgencyNumber);
 
-        Console.WriteLine(account04.GetBalance());
-        Console.WriteLine(account04.AgencyNumber);
+        Account account05 = new Account(74, "3187-3");
+        Account account06 = new Account(3, "0874-9");
+        Account account07 = new Account(97, "3047-6");
+        Console.WriteLine("Total of accounts: " + Account.TotalAccounts);
+
 
         Console.Write("\nPress any key to close...");
         Console.ReadLine();
