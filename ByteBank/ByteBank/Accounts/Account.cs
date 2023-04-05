@@ -21,10 +21,10 @@ namespace ByteBank.Accounts
         public string AccountNumber { get; set; }
         public AccountHolder AccountHolder { get; set; }
 
-        private double accountBalance;
+        private double AccountBalance;
         public void Deposit(double value)
         {
-            accountBalance += value;
+            this.AccountBalance += value;
         }
 
         public void PrintData()
@@ -34,14 +34,14 @@ namespace ByteBank.Accounts
             Console.WriteLine("Client profession: " + AccountHolder.Profession);
             Console.WriteLine("Account number: " + AccountNumber);
             Console.WriteLine("Agency number: " + agencyNumber);
-            Console.WriteLine("Balance: $" + accountBalance);
+            Console.WriteLine("Balance: $" + this.AccountBalance);
         }
 
         public bool Withdraw(double value)
         {
-            if (value <= accountBalance)
+            if (value <= this.AccountBalance)
             {
-                accountBalance -= value;
+                this.AccountBalance -= value;
                 return true;
             }
             else
@@ -52,7 +52,7 @@ namespace ByteBank.Accounts
         }
         public bool Transfer(double value, Account receiver)
         {
-            if (accountBalance < value)
+            if (this.AccountBalance < value)
             {
                 Console.WriteLine("\nInvalid operation!\nNo sufficient founds!\n");
                 return false;
@@ -73,19 +73,24 @@ namespace ByteBank.Accounts
             }
             else
             {
-                this.accountBalance = value;
+                this.AccountBalance = value;
             }
         }
 
         public double GetBalance()
         {
-            return this.accountBalance;
+            return this.AccountBalance;
         }
 
-        public Account(int agencyNumber, string accountNumber)
+        public Account(int agencyNumber, string accountNumber, string accountHolder, double accountBalance, string accountHolderName, string accountHolderID, string accountHolderProfession)
         {
+            this.AccountHolder.Name = accountHolderName;
+            this.AccountHolder.ID = accountHolderID;
+            this.AccountHolder.Profession = accountHolderProfession;
             this.AgencyNumber = agencyNumber;
             this.AccountNumber = accountNumber;
+            this.AccountBalance = accountBalance;
+
             TotalAccounts++;
         }
     }
