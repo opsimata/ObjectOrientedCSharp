@@ -77,13 +77,20 @@ class Program
 
         //Console.WriteLine("\n" + account02.accountHolder.name);
 
-        Account account03 = new Account();
-        account03.agencyNumber = 121;
-        account03.AccountNumber = "3574-6";
-        account03.SetBalance(200);
-        Console.WriteLine(account03.GetBalance());
-        Console.WriteLine(account03.AgencyNumber);
-        Console.WriteLine(account03.AccountNumber);
+        //Account account03 = new Account();
+        //account03.agencyNumber = 121;
+        //account03.AccountNumber = "3574-6";
+        //account03.SetBalance(200);
+        //Console.WriteLine(account03.GetBalance());
+        //Console.WriteLine(account03.AgencyNumber);
+        //Console.WriteLine(account03.AccountNumber);
+
+        Account account04 = new Account(13, "3563-7");
+        account04.SetBalance(500);
+        account04.AccountHolder = new AccountHolder();
+
+        Console.WriteLine(account04.GetBalance());
+        Console.WriteLine(account04.AgencyNumber);
 
         Console.Write("\nPress any key to close...");
         Console.ReadLine();

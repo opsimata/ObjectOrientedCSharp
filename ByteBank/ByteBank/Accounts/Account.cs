@@ -8,7 +8,7 @@ namespace ByteBank.Accounts
         public int AgencyNumber
         {
             get { return this.agencyNumber; }
-            set
+            private set
             {
                 if (value > 0)
                 {
@@ -22,7 +22,7 @@ namespace ByteBank.Accounts
         public string AccountNumber { get; set; }
         public AccountHolder AccountHolder { get; set; }
 
-        private double accountBalance = 100;
+        private double accountBalance;
         public void Deposit(double value)
         {
             accountBalance += value;
@@ -81,6 +81,12 @@ namespace ByteBank.Accounts
         public double GetBalance()
         {
             return this.accountBalance;
+        }
+
+        public Account(int agencyNumber, string accountNumber)
+        {
+            this.AgencyNumber = agencyNumber;
+            this.AccountNumber = accountNumber;
         }
     }
 }
