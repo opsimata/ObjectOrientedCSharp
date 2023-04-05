@@ -78,8 +78,12 @@ class Program
         //Console.WriteLine("\n" + account02.accountHolder.name);
 
         Account account03 = new Account();
+        account03.agencyNumber = 121;
+        account03.AccountNumber = "3574-6";
         account03.SetBalance(200);
         Console.WriteLine(account03.GetBalance());
+        Console.WriteLine(account03.AgencyNumber);
+        Console.WriteLine(account03.AccountNumber);
 
         Console.Write("\nPress any key to close...");
         Console.ReadLine();

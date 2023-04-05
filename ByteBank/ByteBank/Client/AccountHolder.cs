@@ -8,8 +8,8 @@ namespace ByteBank.Client
 {
     public class AccountHolder
     {
-        public string name;
-        public string ID;
-        public string profession;
+        public string Name { get; set; }
+        public string ID { get; set; }
+        public string Profession { get; set; }
     }
 }

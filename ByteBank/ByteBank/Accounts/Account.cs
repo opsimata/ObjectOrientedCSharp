@@ -17,11 +17,12 @@ namespace ByteBank.Accounts
             }
         }
 
-        public string accountNumber;
+        //public string accountNumber;
+
+        public string AccountNumber { get; set; }
+        public AccountHolder AccountHolder { get; set; }
+
         private double accountBalance = 100;
-
-        public AccountHolder accountHolder;
-
         public void Deposit(double value)
         {
             accountBalance += value;
@@ -29,10 +30,10 @@ namespace ByteBank.Accounts
 
         public void PrintData()
         {
-            Console.WriteLine("Client: " + accountHolder.name);
-            Console.WriteLine("Client ID: " + accountHolder.ID);
-            Console.WriteLine("Client profession: " + accountHolder.profession);
-            Console.WriteLine("Account number: " + accountNumber);
+            Console.WriteLine("Client: " + AccountHolder.Name);
+            Console.WriteLine("Client ID: " + AccountHolder.ID);
+            Console.WriteLine("Client profession: " + AccountHolder.Profession);
+            Console.WriteLine("Account number: " + AccountNumber);
             Console.WriteLine("Agency number: " + agencyNumber);
             Console.WriteLine("Balance: $" + accountBalance);
         }
