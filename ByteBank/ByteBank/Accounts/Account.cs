@@ -6,7 +6,7 @@ namespace ByteBank.Accounts
     {
         public int agencyNumber;
         public string accountNumber;
-        public double accountBalance = 100;
+        private double accountBalance = 100;
 
         public AccountHolder accountHolder;
 
@@ -51,6 +51,23 @@ namespace ByteBank.Accounts
                 receiver.Deposit(value);
                 return true;
             }
+        }
+
+        public void SetBalance(double value)
+        {
+            if (value < 0)
+            {
+                return;
+            }
+            else
+            {
+                this.accountBalance = value;
+            }
+        }
+
+        public double GetBalance()
+        {
+            return this.accountBalance;
         }
     }
 }

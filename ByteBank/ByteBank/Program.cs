@@ -52,30 +52,34 @@ class Program
 
         //account01.PrintData();
 
-        AccountHolder client = new AccountHolder();
-        client.name = "Client 01";
-        client.ID = "020.441.248-85";
-        client.profession = "Architect";
+        //AccountHolder client = new AccountHolder();
+        //client.name = "Client 01";
+        //client.ID = "020.441.248-85";
+        //client.profession = "Architect";
 
-        Account account = new Account();
-        account.accountHolder = client;
-        account.agencyNumber = 1;
-        account.accountNumber = "1674-4";
-        account.accountBalance = 1000;
+        //Account account = new Account();
+        //account.accountHolder = client;
+        //account.agencyNumber = 1;
+        //account.accountNumber = "1674-4";
+        //account.accountBalance = 1000;
 
-        account.PrintData();
+        //account.PrintData();
 
 
-        Account account02 = new Account();
-        account02.accountHolder = new AccountHolder();
-        account02.accountHolder.name = "Client 02";
-        account02.accountHolder.ID = "165.149.452.14";
-        account02.accountHolder.profession = "Teacher";
-        account02.agencyNumber = 41;
-        account02.accountNumber = "3541-7";
-        account02.accountBalance = 6741.21;
+        //Account account02 = new Account();
+        //account02.accountHolder = new AccountHolder();
+        //account02.accountHolder.name = "Client 02";
+        //account02.accountHolder.ID = "165.149.452.14";
+        //account02.accountHolder.profession = "Teacher";
+        //account02.agencyNumber = 41;
+        //account02.accountNumber = "3541-7";
+        //account02.accountBalance = 6741.21;
 
-        Console.WriteLine("\n" + account02.accountHolder.name);
+        //Console.WriteLine("\n" + account02.accountHolder.name);
+
+        Account account03 = new Account();
+        account03.SetBalance(200);
+        Console.WriteLine(account03.GetBalance());
 
         Console.Write("\nPress any key to close...");
         Console.ReadLine();
