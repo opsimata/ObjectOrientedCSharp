@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ByteBankADM.Employees;
 
 namespace ByteBankADM.Utilitaries
 {
     public class BonusManager
     {
-        public double TotalBonus { get; private set; }
+        public double BonusesTotal { get; private set; }
+
+        public void Register(Employe employe)
+        {
+            this.BonusesTotal += employe.GetBonus();
+        }
+        public void Register(CEO director)
+        {
+            this.BonusesTotal += director.GetBonus();
+        }
     }
 }

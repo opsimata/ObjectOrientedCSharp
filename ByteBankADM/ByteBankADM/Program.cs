@@ -1,6 +1,5 @@
 ﻿using ByteBankADM.Employees;
-using System;
-using System.Security.Cryptography.X509Certificates;
+using ByteBankADM.Utilitaries;
 
 namespace ByteBankADM
 {
@@ -8,11 +7,6 @@ namespace ByteBankADM
     {
         static void Main(string[] args)
         {
-
-            void Linebreak()
-            {
-                Console.WriteLine("\n");
-            } 
 
             Employe employe = new Employe();
 
@@ -23,7 +17,7 @@ namespace ByteBankADM
             Console.WriteLine("Employe name: " + employe.Name);
             Console.WriteLine("Employe salary bonus: $" + employe.GetBonus());
 
-            Linebreak();
+            BonusManager.Linebreak();
 
             CEO director = new CEO();
             director.Name = "Scrooge McDuck";
@@ -32,6 +26,13 @@ namespace ByteBankADM
 
             Console.WriteLine("CEO name: " + director.Name);
             Console.WriteLine("CEO salary bonus: $" + director.GetBonus());
+
+            BonusManager manager = new BonusManager();
+
+            manager.Register(employe);
+            manager.Register(director);
+
+            BonusManager.Print("Total bonuses: $" + manager.BonusTotal);
 
             Console.Write("\nPress any key to close...");
             Console.ReadLine();
