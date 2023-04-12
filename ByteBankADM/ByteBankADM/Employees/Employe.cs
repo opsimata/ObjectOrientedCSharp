@@ -12,7 +12,7 @@ namespace ByteBankADM.Employees
         public string ID { get; set; }
         public double Salary { get; set; }
 
-        public double GetBonus()
+        public virtual double GetBonus()
         {
             return this.Salary * 0.1;
         }

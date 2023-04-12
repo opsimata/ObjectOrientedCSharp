@@ -12,7 +12,7 @@ namespace ByteBankADM
 
             employe.Name = "Louie Duck";
             employe.ID = "135.747.361-78";
-            employe.Salary = 2000;
+            employe.Salary = 12000;
 
             General.Print("Employe name: " + employe.Name);
             General.Print("Employe salary bonus: $" + employe.GetBonus());
