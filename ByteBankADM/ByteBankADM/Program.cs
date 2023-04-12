@@ -14,25 +14,27 @@ namespace ByteBankADM
             employe.ID = "135.747.361-78";
             employe.Salary = 2000;
 
-            Console.WriteLine("Employe name: " + employe.Name);
-            Console.WriteLine("Employe salary bonus: $" + employe.GetBonus());
+            General.Print("Employe name: " + employe.Name);
+            General.Print("Employe salary bonus: $" + employe.GetBonus());
 
-            BonusManager.Linebreak();
+            General.Linebreak();
 
             CEO director = new CEO();
             director.Name = "Scrooge McDuck";
             director.ID = "047.341.881-18";
             director.Salary = 150000;
 
-            Console.WriteLine("CEO name: " + director.Name);
-            Console.WriteLine("CEO salary bonus: $" + director.GetBonus());
+            General.Print("CEO name: " + director.Name);
+            General.Print("CEO salary bonus: $" + director.GetBonus());
 
             BonusManager manager = new BonusManager();
 
             manager.Register(employe);
             manager.Register(director);
 
-            BonusManager.Print("Total bonuses: $" + manager.BonusTotal);
+            General.Linebreak();
+
+            General.Print("Total bonuses: $" + manager.BonusesTotal);
 
             Console.Write("\nPress any key to close...");
             Console.ReadLine();

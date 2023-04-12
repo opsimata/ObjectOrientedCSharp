@@ -10,9 +10,5 @@ namespace ByteBankADM.Utilitaries
         {
             this.BonusesTotal += employe.GetBonus();
         }
-        public void Register(CEO director)
-        {
-            this.BonusesTotal += director.GetBonus();
-        }
     }
 }
