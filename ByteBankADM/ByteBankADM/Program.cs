@@ -1,5 +1,6 @@
 ﻿using ByteBankADM.Employees;
 using ByteBankADM.Utilitaries;
+using ByteBankADM.InternalSystem;
 
 namespace ByteBankADM
 {
@@ -73,6 +74,40 @@ namespace ByteBankADM
                 manager.Register(accountManager01);
 
                 General.Print("Total bonuses: $" + manager.BonusesTotal);
+            }
+
+            General.Linebreak();
+
+            UseLoginSystem();
+
+            void UseLoginSystem()
+            {
+                BankSystem system = new BankSystem();
+
+                CEO director02 = new CEO("074.801.374-16");
+                director02.Name = "Launchpad McQuack";
+                director02.Password = "123";
+                director02.Login = "@McQuack";
+
+                AccountManager accountManager02 = new AccountManager("219.412.635-25");
+                accountManager02.Name = "Donald Duck";
+                accountManager02.Password = "321";
+                accountManager02.Login = "@Donald_";
+
+                #region
+                //Assistant assistant02 = new Assistant("023.761.786-32");
+                //assistant02.Name = "Fergus McDuck";
+                //assistant02.Password = "er$@lgjqwe93";
+
+                //Designer designer02 = new Designer("301.884.745-26");
+                //designer02.Name = "José Carioca";
+                //designer02.Password = "a2h54WH4Wvdshg20";
+                #endregion
+
+                system.Login(director02, "123", "@McQuack");
+                General.Linebreak();
+                system.Login(accountManager02, "321", "ifjOIFUHJ");
+                General.Linebreak();
             }
 
             General.Linebreak();

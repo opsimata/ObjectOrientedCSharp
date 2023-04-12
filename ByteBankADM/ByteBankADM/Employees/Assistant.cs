@@ -4,12 +4,10 @@ namespace ByteBankADM.Employees
 {
     public class Assistant : Employe
     {
-
         public Assistant(string id) : base(id, 2000)
         {
 
         }
-
         public override void IncreaseWage()
         {
             this.Salary *= 1.1;
