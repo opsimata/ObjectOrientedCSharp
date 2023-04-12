@@ -4,7 +4,7 @@
     {
         public override double GetBonus()
         {
-            return this.Salary;
+            return this.Salary + (base.GetBonus() * 5);
         }
     }
 }

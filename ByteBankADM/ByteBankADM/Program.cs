@@ -22,7 +22,7 @@ namespace ByteBankADM
             CEO director = new CEO();
             director.Name = "Scrooge McDuck";
             director.ID = "047.341.881-18";
-            director.Salary = 150000;
+            director.Salary = 100000;
 
             General.Print("CEO name: " + director.Name);
             General.Print("CEO salary bonus: $" + director.GetBonus());
