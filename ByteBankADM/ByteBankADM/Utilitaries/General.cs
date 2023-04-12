@@ -4,7 +4,7 @@
     {
         public static void Linebreak()
         {
-            Console.WriteLine("\n");
+            Console.WriteLine("");
         }
         public static void Print(string output)
         {

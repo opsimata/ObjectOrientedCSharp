@@ -7,38 +7,47 @@ namespace ByteBankADM
     {
         static void Main(string[] args)
         {
+            #region
+            //Employe employe = new Employe("135.747.361-78", 10000);
 
-            Employe employe = new Employe("135.747.361-78");
+            //employe.Name = "Louie Duck";
+            ////employe.ID = "135.747.361-78";
 
-            employe.Name = "Louie Duck";
-            //employe.ID = "135.747.361-78";
-            employe.Salary = 12000;
+            //General.Print("Employe name: " + employe.Name);
+            //General.Print("Employe wage: $" + employe.Salary);
+            //General.Print("Employe salary bonus: $" + employe.GetBonus());
 
-            General.Print("Employe name: " + employe.Name);
-            General.Print("Employe salary bonus: $" + employe.GetBonus());
+            //General.Linebreak();
 
-            General.Linebreak();
+            //CEO director = new CEO("047.341.881-18");
+            //director.Name = "Scrooge McDuck";
+            ////director.ID = "047.341.881-18";
 
-            CEO director = new CEO("047.341.881-18");
-            director.Name = "Scrooge McDuck";
-            //director.ID = "047.341.881-18";
-            director.Salary = 100000;
+            //General.Print("CEO name: " + director.Name);
+            //General.Print("CEO wage: $" + director.Salary);
+            //General.Print("CEO salary bonus: $" + director.GetBonus());
 
-            General.Print("CEO name: " + director.Name);
-            General.Print("CEO salary bonus: $" + director.GetBonus());
+            //BonusManager manager = new BonusManager();
 
-            BonusManager manager = new BonusManager();
+            //manager.Register(employe);
+            //manager.Register(director);
 
-            manager.Register(employe);
-            manager.Register(director);
+            //General.Linebreak();
 
-            General.Linebreak();
+            //General.Print("Total bonuses: $" + manager.BonusesTotal);
 
-            General.Print("Total bonuses: $" + manager.BonusesTotal);
+            //General.Linebreak();
 
-            General.Linebreak();
+            //General.Print("Total number of employees: " + Employe.EmployeesTotal);
 
-            General.Print("Total number of employees: " + Employe.EmployeesTotal);
+            //General.Linebreak();
+
+            //employe.IncreaseWage();
+            //director.IncreaseWage();
+
+            //General.Print("Employe new wage: $" + employe.Salary);
+            //General.Print("CEO new wage: $" + director.Salary);
+            #endregion
 
             General.Linebreak();
 
