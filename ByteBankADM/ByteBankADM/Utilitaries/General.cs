@@ -1,6 +1,6 @@
 ﻿namespace ByteBankADM.Utilitaries
 {
-    internal class General
+    public class General
     {
         public static void Linebreak()
         {

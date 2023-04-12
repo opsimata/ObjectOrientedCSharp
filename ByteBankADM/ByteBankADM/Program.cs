@@ -36,7 +36,13 @@ namespace ByteBankADM
 
             General.Print("Total bonuses: $" + manager.BonusesTotal);
 
-            Console.Write("\nPress any key to close...");
+            General.Linebreak();
+
+            General.Print("Total number of employees: " + Employe.EmployeesTotal);
+
+            General.Linebreak();
+
+            Console.Write("Press any key to close...");
             Console.ReadLine();
         }
     }

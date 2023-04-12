@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ByteBankADM.Utilitaries;
 
 namespace ByteBankADM.Employees
 {
@@ -11,6 +7,13 @@ namespace ByteBankADM.Employees
         public string Name { get; set; }
         public string ID { get; set; }
         public double Salary { get; set; }
+        public static int EmployeesTotal { get; private set; }
+
+        public Employe(string id)
+        {
+            this.ID = id;
+            EmployeesTotal++; //Incrementa CEO por conta da herança
+        }
 
         public virtual double GetBonus()
         {
