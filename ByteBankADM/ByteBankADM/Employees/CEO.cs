@@ -5,8 +5,9 @@ namespace ByteBankADM.Employees
     public class CEO : Employe
     {
 
-        public CEO()
+        public CEO(string id) : base(id)
         {
+
         }
         public override double GetBonus()
         {

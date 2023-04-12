@@ -8,10 +8,10 @@ namespace ByteBankADM
         static void Main(string[] args)
         {
 
-            Employe employe = new Employe();
+            Employe employe = new Employe("135.747.361-78");
 
             employe.Name = "Louie Duck";
-            employe.ID = "135.747.361-78";
+            //employe.ID = "135.747.361-78";
             employe.Salary = 12000;
 
             General.Print("Employe name: " + employe.Name);
@@ -19,9 +19,9 @@ namespace ByteBankADM
 
             General.Linebreak();
 
-            CEO director = new CEO();
+            CEO director = new CEO("047.341.881-18");
             director.Name = "Scrooge McDuck";
-            director.ID = "047.341.881-18";
+            //director.ID = "047.341.881-18";
             director.Salary = 100000;
 
             General.Print("CEO name: " + director.Name);
