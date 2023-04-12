@@ -49,6 +49,32 @@ namespace ByteBankADM
             //General.Print("CEO new wage: $" + director.Salary);
             #endregion
 
+            CalcBonus();
+
+            void CalcBonus()
+            {
+                BonusManager manager = new BonusManager();
+
+                CEO director = new CEO("617.549.456-47");
+                director.Name = "Scrooge McDuck";
+
+                Designer designer01 = new Designer("132.149.167-81");
+                designer01.Name = "Huey Duck";
+
+                Assistant assistant01 = new Assistant("973.168.741-21");
+                designer01.Name = "Dewey Duck";
+
+                AccountManager accountManager01 = new AccountManager("348.974.358-69");
+                designer01.Name = "Louie Duck";
+
+                manager.Register(director);
+                manager.Register(designer01);
+                manager.Register(assistant01);
+                manager.Register(accountManager01);
+
+                General.Print("Total bonuses: $" + manager.BonusesTotal);
+            }
+
             General.Linebreak();
 
             Console.Write("Press any key to close...");
