@@ -21,11 +21,7 @@ namespace ByteBank.Accounts
         public string AccountNumber { get; set; }
         public AccountHolder AccountHolder { get; set; }
 
-        private double AccountBalance;
-        public void Deposit(double value)
-        {
-            this.AccountBalance += value;
-        }
+        private double AccountBalance = 5000;
 
         public void PrintData()
         {
@@ -35,6 +31,10 @@ namespace ByteBank.Accounts
             Console.WriteLine("Account number: " + AccountNumber);
             Console.WriteLine("Agency number: " + agencyNumber);
             Console.WriteLine("Balance: $" + this.AccountBalance);
+        }
+        public void Deposit(double value)
+        {
+            this.AccountBalance += value;
         }
 
         public bool Withdraw(double value)
@@ -82,14 +82,10 @@ namespace ByteBank.Accounts
             return this.AccountBalance;
         }
 
-        public Account(int agencyNumber, string accountNumber, string accountHolder, double accountBalance, string accountHolderName, string accountHolderID, string accountHolderProfession)
+        public Account(int agencyNumber, string accountNumber)
         {
-            this.AccountHolder.Name = accountHolderName;
-            this.AccountHolder.ID = accountHolderID;
-            this.AccountHolder.Profession = accountHolderProfession;
             this.AgencyNumber = agencyNumber;
             this.AccountNumber = accountNumber;
-            this.AccountBalance = accountBalance;
 
             TotalAccounts++;
         }

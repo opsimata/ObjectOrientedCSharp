@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        #region
         //Account account01 = new Account();
 
         //account01.accountHolder = "Person 01";
@@ -85,16 +86,28 @@ class Program
         //Console.WriteLine(account03.AgencyNumber);
         //Console.WriteLine(account03.AccountNumber);
 
-        //Account account04 = new Account(13, "3563-7");
-        //account04.SetBalance(500);
-        //account04.AccountHolder = new AccountHolder();
-        //Console.WriteLine(account04.GetBalance());
-        //Console.WriteLine(account04.AgencyNumber);
+        #endregion
 
-        Account account05 = new Account(74, "3187-3");
-        Account account06 = new Account(3, "0874-9");
-        Account account07 = new Account(97, "3047-6");
-        Console.WriteLine("Total of accounts: " + Account.TotalAccounts);
+        Account account01 = new Account(283, "1234-X");
+        account01.AccountHolder = new AccountHolder();
+        account01.AccountHolder.Name = "Test";
+        account01.AccountHolder.Profession = "Developer";
+        account01.AccountHolder.ID = "123.456.789-94";
+
+        Account account02 = new Account(284, "9874-Z");
+        Account account03 = new Account(285, "1111-Z");
+        Console.WriteLine("Created accounts: " + Account.TotalAccounts);
+
+        //Exemplo transferencia:
+        account02.Transfer(50, account01);
+        Console.WriteLine("Account 01 balance: $"+ account01.GetBalance());
+        Console.WriteLine("Account 01 balance: $" + account02.GetBalance());
+
+        Account account = new Account(17, "4789-2");
+        account.AccountNumber = "1011-9";
+        account.Deposit(200);
+
+        account01.PrintData();
 
 
         Console.Write("\nPress any key to close...");

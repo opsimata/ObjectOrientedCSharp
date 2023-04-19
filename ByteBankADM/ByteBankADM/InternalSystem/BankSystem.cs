@@ -1,13 +1,14 @@
 ﻿using ByteBankADM.Employees;
+using ByteBankADM.Partnership;
 using ByteBankADM.Utilitaries;
 
 namespace ByteBankADM.InternalSystem
 {
     public class BankSystem
     {
-        public bool Login(Authenticator employe, string password, string login)
+        public bool Login(IAuthenticator employe, string password)
         {
-            bool authenticatedUser = employe.Authentication(password, login);
+            bool authenticatedUser = employe.Authentication(password);
 
             if (authenticatedUser == true)
             {

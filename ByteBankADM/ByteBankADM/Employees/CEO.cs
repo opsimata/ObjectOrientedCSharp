@@ -3,9 +3,8 @@ using ByteBankADM.Utilitaries;
 
 namespace ByteBankADM.Employees
 {
-    public class CEO : Authenticator
+    public class CEO : AuthenticableEmploye
     {
-
         public CEO(string id) : base(id, 100000)
         {
 
@@ -17,10 +16,6 @@ namespace ByteBankADM.Employees
         public override double GetBonus()
         {
             return this.Salary * .35;
-        }
-        public override bool Authentication(string password, string login)
-        {
-            return this.Password == password;
         }
     }
 }

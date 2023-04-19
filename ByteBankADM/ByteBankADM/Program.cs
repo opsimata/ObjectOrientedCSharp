@@ -1,6 +1,7 @@
 ﻿using ByteBankADM.Employees;
 using ByteBankADM.Utilitaries;
 using ByteBankADM.InternalSystem;
+using ByteBankADM.Partnership;
 
 namespace ByteBankADM
 {
@@ -73,7 +74,7 @@ namespace ByteBankADM
                 manager.Register(assistant01);
                 manager.Register(accountManager01);
 
-                General.Print("Total bonuses: $" + manager.BonusesTotal);
+                General.Print("Total of all employees bonuses: $" + manager.BonusesTotal + ".");
             }
 
             General.Linebreak();
@@ -87,30 +88,28 @@ namespace ByteBankADM
                 CEO director02 = new CEO("074.801.374-16");
                 director02.Name = "Launchpad McQuack";
                 director02.Password = "123";
-                director02.Login = "@McQuack";
 
                 AccountManager accountManager02 = new AccountManager("219.412.635-25");
                 accountManager02.Name = "Donald Duck";
                 accountManager02.Password = "321";
-                accountManager02.Login = "@Donald_";
 
-                #region
-                //Assistant assistant02 = new Assistant("023.761.786-32");
-                //assistant02.Name = "Fergus McDuck";
-                //assistant02.Password = "er$@lgjqwe93";
+                BusinessPartner partner01 = new BusinessPartner();
+                partner01.Password = "898";
+                partner01.Name = "Gyro Gearloose";
 
-                //Designer designer02 = new Designer("301.884.745-26");
-                //designer02.Name = "José Carioca";
-                //designer02.Password = "a2h54WH4Wvdshg20";
-                #endregion
+                BusinessPartner partner02 = new BusinessPartner();
+                partner02.Password = "777";
+                partner02.Name = "José Carioca";
 
-                system.Login(director02, "123", "@McQuack");
+                system.Login(director02, "123");
                 General.Linebreak();
-                system.Login(accountManager02, "321", "ifjOIFUHJ");
+                system.Login(accountManager02, "000");
+                General.Linebreak();
+                system.Login(partner01, "898");
+                General.Linebreak();
+                system.Login(partner02, "898");
                 General.Linebreak();
             }
-
-            General.Linebreak();
 
             Console.Write("Press any key to close...");
             Console.ReadLine();
